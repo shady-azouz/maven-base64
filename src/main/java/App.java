@@ -1,7 +1,7 @@
-import java.util.Base64;
+import org.apache.commons.codec.binary.Base64;
 
 public class App {
-    public String converter(String s) {
-        return Base64.getEncoder().encodeToString(s.getBytes());
+    public byte[] converter(String s) {
+        return Base64.encodeBase64(s.getBytes());
     }
 }
